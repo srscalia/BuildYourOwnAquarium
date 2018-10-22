@@ -1,0 +1,10 @@
+<h1>Build Your Own Aquarium</h1>
+
+
+<%= form_for :aquarium do |f|  %>
+<%= f.label :gallons, "10 Gallons" %>
+<%= f.radio_button(:gallons, 10) %>
+<%= f.label :gallons, "55 Gallons" %>
+<%= f.radio_button(:gallons, 55) %>
+<%= f.submit %>
+<% end %>

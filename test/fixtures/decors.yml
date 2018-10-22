@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  style: MyString
+  cost: 1
+  facts: MyString
+  aquarium_id: MyString
+
+two:
+  style: MyString
+  cost: 1
+  facts: MyString
+  aquarium_id: MyString

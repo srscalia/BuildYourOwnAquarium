@@ -9,11 +9,11 @@ class EquipmentController < ApplicationController
   end
 
   def new
-    @equipment = Equipment.new
+    @items = ["yoyo", "tank"]
   end
 
   def create
-    @equipment = Equipment.create(equipment_params)
+    redirect_to new_decor_path
   end
 
   def edit

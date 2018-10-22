@@ -1,0 +1,7 @@
+<h1>Select Equipment</h1>
+
+<%= form_tag("/equipment", method: "post") do %>
+  <%= label_tag "item" %>
+  <%= select_tag "item", options_for_select(@items) %>
+  <%= submit_tag("submit") %>
+<% end %>

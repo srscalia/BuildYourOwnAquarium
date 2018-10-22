@@ -15,7 +15,7 @@ class AquariaController < ApplicationController
 
   def create
     @aquarium = Aquarium.create(aquarium_params)
-    redirect_to aquarium_path(@aquarium)
+    redirect_to new_fish_path
   end
 
   def edit

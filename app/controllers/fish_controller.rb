@@ -10,11 +10,12 @@ class FishController < ApplicationController
 
   def new
     @fish = Fish.new
+    @fishes = ["a", "b"]
   end
 
   def create
-    @fish = Fish.create(fish_params)
-
+    x = params[:species]
+    redirect_to new_equipment_path
   end
 
   def edit

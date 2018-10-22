@@ -1,0 +1,7 @@
+<h1>Select Decor</h1>
+
+<%= form_tag("/decors", method: "post") do %>
+  <%= label_tag "style" %>
+  <%= select_tag "style", options_for_select(@styles) %>
+  <%= submit_tag("submit") %>
+<% end %>

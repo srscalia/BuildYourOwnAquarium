@@ -9,11 +9,11 @@ class DecorsController < ApplicationController
   end
 
   def new
-    @decor = Decor.new
+    @styles = ["MOD", "hipster"]
   end
 
   def create
-    @decor = Decor.create(decor_params)
+    redirect_to aquaria_path
   end
 
   def edit
@@ -33,6 +33,4 @@ class DecorsController < ApplicationController
   def find_decor
     @decor = Decor.find_by(id: params[:id])
   end
-end
-
 end

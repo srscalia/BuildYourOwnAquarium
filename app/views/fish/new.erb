@@ -1,6 +1,8 @@
-<h1>Select Fish</h1>
+<h1>Build Your Own Aquarium</h1>
 
-<%= form_tag("/fish", method: "post") do %>
+<h2>Select Fish</h2>
+
+<%= form_tag("/fishies", method: "post") do %>
   <%= label_tag "Species" %>
   <%= select_tag "species", options_for_select(@fishes) %>
   <%= submit_tag("submit") %>

@@ -8,14 +8,18 @@ class FishController < ApplicationController
   def show
   end
 
-  def new
-    @fish = Fish.new
-    @fishes = ["a", "b"]
+  def fishies
+    @fishes = Fish.all.map do |fish|
+      fish.species
+    end
+    render :new
   end
 
-  def create
-    x = params[:species]
-    redirect_to new_equipment_path
+  def select_fish
+    Fish.all.find_by(species: params[:species])
+    #push this into an array that we have made from our session
+    #will be pulled into the index page
+    redirect_to equipment_path
   end
 
   def edit

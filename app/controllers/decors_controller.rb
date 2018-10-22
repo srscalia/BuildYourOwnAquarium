@@ -2,17 +2,22 @@ class DecorsController < ApplicationController
   before_action :find_decor, only: [:show, :edit, :update]
 
   def index
-    @decors = Decor.all
   end
 
   def show
   end
 
-  def new
-    @styles = ["MOD", "hipster"]
+  def decors
+    @styles = Decor.all.map do |style|
+      style.style
+    end
+    render :new
   end
 
-  def create
+  def select_decor
+    Decor.all.find_by(style: params[:style])
+    #push this into an array that we have made from our session
+    #will be pulled into the index page
     redirect_to aquaria_path
   end
 

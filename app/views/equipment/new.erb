@@ -1,7 +1,9 @@
-<h1>Select Equipment</h1>
+<h1>Build Your Own Aquarium</h1>
+
+<h2>Select Equipment</h2>
 
 <%= form_tag("/equipment", method: "post") do %>
   <%= label_tag "item" %>
-  <%= select_tag "item", options_for_select(@items) %>
+  <%= select_tag "item", options_for_select(@equipments) %>
   <%= submit_tag("submit") %>
 <% end %>

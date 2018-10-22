@@ -8,12 +8,16 @@ class EquipmentController < ApplicationController
   def show
   end
 
-  def new
-    @items = ["yoyo", "tank"]
+  def equipment
+    @equipments = Equipment.all.map do |eq|
+      eq.item
+    end
+    render :new
   end
 
-  def create
-    redirect_to new_decor_path
+  def select_equipment
+  Equipment.all.find_by(item: params[:item])
+    redirect_to decors_path
   end
 
   def edit

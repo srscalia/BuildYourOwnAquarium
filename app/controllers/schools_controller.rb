@@ -11,7 +11,7 @@ class SchoolsController < ApplicationController
 
   def new
     @school = School.new
-    @options = ["Neon Tetra", "Tiger Barb", "Glo Fish Tetra", "Swordtail", "Cory Catfish", "Gourami", "Molly", "Ram Cichlid", "Magikarp", "Gyarados"]
+    @options = ["Neon Tetra", "Tiger Barb", "Glo Fish Tetra", "Swordtail", "Cory Catfish", "Dwarf Gourami", "Molly", "Ram Cichlid", "Magikarp", "Gyarados"]
     @aquarium = Aquarium.all.last
   end
 
@@ -21,7 +21,7 @@ class SchoolsController < ApplicationController
   end
 
   def edit
-    @options = ["Neon Tetra", "Tiger Barb", "Glo Fish Tetra", "Swordtail", "Cory Catfish", "Gourami", "Molly", "Ram Cichlid", "Magikarp", "Gyarados"]
+    @options = ["Neon Tetra", "Tiger Barb", "Glo Fish Tetra", "Swordtail", "Cory Catfish", "Dwarf Gourami", "Molly", "Ram Cichlid", "Magikarp", "Gyarados"]
     @aquarium = Aquarium.all.last
   end
 
@@ -62,11 +62,47 @@ class SchoolsController < ApplicationController
        as follows: water temperature should be between 72°F to 78°F, and a PH of 6.0 to 7.5.
        Glo Fish are omnivorous and can be fed various types of food including flakes,
        small pellets and frozen food (daphnia, brine shrimp, and worms).",
-       "Swordtail" => "1",
-      "Cory Catfish" => "2",
-      "Gourami"=> "3",
-      "Molly"=> "3",
-      "Ram Cichlid"=> "3",
+       "Swordtail" => "Swordtail fish are a peaceful and active species. They are
+       very social and enjoy good company, especially when housed with other swordtails
+       or similar passive species. Swordtails can make great companions with platies,
+       mollies, and angelfish. They are sturdy tropical fish that can tolerate a wide
+       range of water temperatures. They should do fine in any water temperature between
+         65- 82⁰Fahrenheit and a PH of 7.0 to 8.4. Swordtails will accept a wide variety
+         of foods including quality flake food or live food such as worms.",
+      "Cory Catfish" => "Cory Catfish are are very popular freshwater fish that come
+      in many different colors and sizes. Cory Catfish are very social creatures,
+      especially with others of their kind. While Cory Cats can survive alone, they
+      seem much happier in a group of two or more. Depending on the specific type,
+      Cory Catfish can range from about 1 inch to about 2.5 inches in length. A Cory
+      Catfish is a bottom dweller, so it’s a good idea to keep at least 2 inches of
+      aquarium gravel or substrate on the tank bottom. They should be kept in water
+      that is between 72- 78⁰ Fahrenheit and a PH of 7.0 to 7.8. Their diet includes
+      basic food types including fish flakes, pellets and bottom feeder tablets.",
+      "Dwarf Gourami"=> "The dwarf gourami is a peaceful and shy fish. If you have
+      a pair of them, the two fish will swim together.  Dwarf gouramis are considered
+      labyrinth fish, which means they breathe straight from the air with a lung-like
+      labyrinth organ and need to have access to the water’s surface. They can come in
+      both bright blue and bright orange varieties.They should be kept in water that
+      is between 72- 82⁰ Fahrenheit and a PH of 6.0 to 7.5. Gouramis will eat flake
+      food, freeze-dried food, frozen foods, and vegetable tablets.",
+      "Molly"=> "Mollies are rarely aggressive towards other fish. They do great
+      with any of the common tropical fish. There are numerous types of mollies,
+      but the most common types held in aquariums are short finned mollies. The
+      recommended temperature range for Mollies is 75-80° F since they are native
+      to tropical parts of the world. The pH should be between 7 and 8, and using
+      driftwood in the aquarium is therefore not recommended since driftwood is
+      known to lower the pH value. Feeding mollies is extremely easy. Feeding
+      them flake food in the amount of what they eat completely in 5 minutes
+      will satisfy their dietary needs.",
+      "Ram Cichlid"=> "The ram cichlid is a species of freshwater fish originally
+       from the Orinoco River basin of  Venezuela and Colombia.  The ram cichlid
+       is popular in the tropical freshwater community aquarium. While most
+       cichlids are not well suited for a community tank, if a male and female
+       pair of this specific type are placed in a community tank, they generally
+       will do well. There are a variety of types including golden, electric
+         blue, and long-finned. The recommended temperature range for Rams is
+         75-81° F and a PH of 6.5 - 7.5.  Rams will eat a variety of flakes
+         as well as live and frozen food.",
       "Magikarp"=> "3",
       "Gyarados" => "3"}
     @school.facts1 = @facts[@school.species1]

@@ -5,43 +5,43 @@
 
 <p><b>Fish</b></p>
 <ul>
-  <li><%= @aquarium.schools.first.species1 %></li>
-  <li><%= @aquarium.schools.first.species2 %></li>
-  <li><%= @aquarium.schools.first.species3 %></li>
+  <li><%= @aquarium.school.species1 %></li>
+  <li><%= @aquarium.school.species2 %></li>
+  <li><%= @aquarium.school.species3 %></li>
 </ul>
 <p><%= link_to "Edit", edit_school_path %></p>
 
 
 <p><b>Equipment</b></p>
 <ul>
-  <li><%= @aquarium.equipment.first.item1 %></li>
-  <li><%= @aquarium.equipment.first.item2 %></li>
-  <li><%= @aquarium.equipment.first.item3 %></li>
+  <li><%= @aquarium.equipment.item1 %></li>
+  <li><%= @aquarium.equipment.item2 %></li>
+  <li><%= @aquarium.equipment.item3 %></li>
 </ul>
 <p><%= link_to "Edit", edit_equipment_path %></p>
 
 
-<p>Style: <%= @aquarium.decors.first.style %></p>
+<p><b>Style</b>: <%= @aquarium.decor.style %></p>
 <%= link_to "Edit", edit_decor_path %>
-
+<br><br>
 
 <h3>Aquarium Facts</h3>
 
-<p> Fish Facts </p>
+<p><b> Fish Facts </b></p>
 <ul>
-  <li><%=@aquarium.schools.first.species1 %>: <%= @aquarium.schools.first.facts1 %></li>
-  <li><%=@aquarium.schools.first.species2 %>: <%= @aquarium.schools.first.facts2 %></li>
-  <li><%=@aquarium.schools.first.species3 %>: <%= @aquarium.schools.first.facts3 %></li>
+  <li><%=@aquarium.school.species1 %>: <%= @aquarium.school.facts1 %></li>
+  <li><%=@aquarium.school.species2 %>: <%= @aquarium.school.facts2 %></li>
+  <li><%=@aquarium.school.species3 %>: <%= @aquarium.school.facts3 %></li>
 </ul>
 
-<p> Equipments Facts </p>
+<p><b> Equipments Facts </b></p>
 <ul>
-  <li><%=@aquarium.equipment.first.item1 %>: <%= @aquarium.equipment.first.facts1 %></li>
-  <li><%=@aquarium.equipment.first.item2 %>: <%= @aquarium.equipment.first.facts2 %></li>
-  <li><%=@aquarium.equipment.first.item3 %>: <%= @aquarium.equipment.first.facts3 %></li>
+  <li><%=@aquarium.equipment.item1 %>: <%= @aquarium.equipment.facts1 %></li>
+  <li><%=@aquarium.equipment.item2 %>: <%= @aquarium.equipment.facts2 %></li>
+  <li><%=@aquarium.equipment.item3 %>: <%= @aquarium.equipment.facts3 %></li>
 </ul>
 
-<p> Decor Facts </p>
+<p><b>Decor Facts </b></p>
 <ul>
-  <li><%= @aquarium.decors.first.facts %></li>
+  <li><%= @aquarium.decor.facts %></li>
 </ul>

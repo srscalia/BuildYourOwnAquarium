@@ -1,14 +1,14 @@
 class AquariaController < ApplicationController
 
-  before_action :find_aquarium, only: [:edit, :update]
-
-  def show
-    @aquarium = Aquarium.all.last
-  end
+  before_action :find_aquarium, only: [:update]
 
   def new
     @aquarium = Aquarium.new
     @tanks = [10, 55]
+  end
+
+  def show
+    @aquarium = Aquarium.all.last
   end
 
   def create
@@ -17,7 +17,8 @@ class AquariaController < ApplicationController
   end
 
   def edit
-
+    @aquarium = Aquarium.all.last
+    @tanks = [10, 55]
   end
 
   def update

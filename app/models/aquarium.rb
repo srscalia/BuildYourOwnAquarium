@@ -1,5 +1,5 @@
 class Aquarium < ApplicationRecord
-  has_many :schools
-  has_many :decors
-  has_many :equipment
+  has_one :school
+  has_one :decor
+  has_one :equipment
 end

@@ -7,18 +7,18 @@ class DecorsController < ApplicationController
   def show
   end
 
-  def decors
-    @styles = Decor.all.map do |style|
-      style.style
-    end
-    render :new
+  def new
+    @decor = Decor.new
+    @options = ["Mod", "country", "hipster"]
+    @aquarium = Aquarium.all.last
   end
 
-  def select_decor
-    Decor.all.find_by(style: params[:style])
-    #push this into an array that we have made from our session
-    #will be pulled into the index page
-    redirect_to aquaria_path
+  def create
+    @facts = {"Mod"=> "soo mod", "country" => "yehawww", "hipster" => "fake news"}
+    @decor = Decor.create(decor_params)
+    @decor.facts = @facts[@decor.style]
+    @decor.save
+    redirect_to aquarium_path(@decor.aquarium_id)
   end
 
   def edit
@@ -32,7 +32,7 @@ class DecorsController < ApplicationController
   private
 
   def decor_params
-    params.require(:decor).permit(:style, :cost, :facts)
+    params.require(:decor).permit(:style, :aquarium_id)
   end
 
   def find_decor

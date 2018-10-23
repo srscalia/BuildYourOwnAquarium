@@ -2,8 +2,9 @@
 
 <h2>Select Decor</h2>
 
-<%= form_tag("/decors", method: "post") do %>
-  <%= label_tag "style" %>
-  <%= select_tag "style", options_for_select(@styles) %>
-  <%= submit_tag("submit") %>
+<%= form_for @decor do |f| %>
+  <%= f.label :style %>
+  <%= f.select(:style, @options)  %>
+  <%= f.hidden_field :aquarium_id, :value => @aquarium.id %>
+  <%= f.submit "Create" %>
 <% end %>

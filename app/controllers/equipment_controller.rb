@@ -8,16 +8,18 @@ class EquipmentController < ApplicationController
   def show
   end
 
-  def equipment
-    @equipments = Equipment.all.map do |eq|
-      eq.item
-    end
-    render :new
+  def new
+    @equipment = Equipment.new
+    @options = ["therm", "filter", "heater"]
+    @aquarium = Aquarium.all.last
   end
 
-  def select_equipment
-  Equipment.all.find_by(item: params[:item])
-    redirect_to decors_path
+  def create
+    @facts = {"therm"=> "really cool bro", "filter" => "yeah this is awesome", "heater" => "keep fishies warm"}
+    @equipment = Equipment.create(equipment_params)
+    @equipment.facts = @facts[@equipment.item]
+    @equipment.save
+    redirect_to new_decor_path
   end
 
   def edit
@@ -31,7 +33,7 @@ class EquipmentController < ApplicationController
   private
 
   def equipment_params
-    params.require(:equipment).permit(:item, :cost, :facts)
+    params.require(:equipment).permit(:item, :aquarium_id)
   end
 
   def find_equipment

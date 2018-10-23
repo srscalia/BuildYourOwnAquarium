@@ -8,18 +8,18 @@ class FishController < ApplicationController
   def show
   end
 
-  def fishies
-    @fishes = Fish.all.map do |fish|
-      fish.species
-    end
-    render :new
+  def new
+    @fish = Fish.new
+    @options = ["Bob", "Peter", "Billy"]
+    @aquarium = Aquarium.all.last
   end
 
-  def select_fish
-    Fish.all.find_by(species: params[:species])
-    #push this into an array that we have made from our session
-    #will be pulled into the index page
-    redirect_to equipment_path
+  def create
+    @facts = {"Bob"=> "yooooooooo", "Peter" => "hey", "Billy" => "waddup"}
+    @fish = Fish.create(fish_params)
+    @fish.facts = @facts[@fish.species]
+    @fish.save
+    redirect_to new_equipment_path
   end
 
   def edit
@@ -33,7 +33,7 @@ class FishController < ApplicationController
   private
 
   def fish_params
-    params.require(:fish).permit(:species, :cost, :facts)
+    params.require(:fish).permit(:species, :aquarium_id)
   end
 
   def find_fish

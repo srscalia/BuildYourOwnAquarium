@@ -2,8 +2,8 @@
 
 <h2>Select Aquarium Size</h2>
 
-<%= form_tag("/aquaria", method: "post") do %>
-  <%= label_tag "Gallons" %>
-  <%= select_tag "Gallons", options_for_select(@tanks) %>
-  <%= submit_tag("submit") %>
+<%= form_for @aquarium do |f| %>
+  <%= f.label :gallons, "Gallons (10 or 55)" %>
+  <%= f.text_field :gallons  %>
+  <%= f.submit "Create" %>
 <% end %>

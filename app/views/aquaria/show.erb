@@ -1,1 +1,11 @@
-show
+<h1>Aquarium Details</h1>
+<p>Aquarium Size: <%= @aquarium.gallons %> gallons</p>
+<p>Species: <%= @aquarium.fish.first.species %></p>
+<p>Equipment: <%= @aquarium.equipment.first.item %></p>
+<p>Style: <%= @aquarium.decors.first.style %></p>
+
+<h3>Aquarium Facts</h3>
+
+<p>Species: <%= @aquarium.fish.first.facts %></p>
+<p>Equipment: <%= @aquarium.equipment.first.facts %></p>
+<p>Style: <%= @aquarium.decors.first.facts %></p>

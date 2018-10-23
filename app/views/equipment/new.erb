@@ -2,8 +2,10 @@
 
 <h2>Select Equipment</h2>
 
-<%= form_tag("/equipment", method: "post") do %>
-  <%= label_tag "item" %>
-  <%= select_tag "item", options_for_select(@equipments) %>
-  <%= submit_tag("submit") %>
+<%= form_for @equipment do |f| %>
+  <%= f.label :item %>
+  <%= f.select(:item, @options)  %>
+  <%= f.hidden_field :aquarium_id, :value => @aquarium.id %>
+
+  <%= f.submit "Create" %>
 <% end %>

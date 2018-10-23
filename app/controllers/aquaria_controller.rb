@@ -1,26 +1,24 @@
 class AquariaController < ApplicationController
 
-  before_action :find_aquarium, only: [:show, :edit, :update]
+  before_action :find_aquarium, only: [:edit, :update]
 
 
   def show
+    @aquarium = Aquarium.all.last
   end
 
-  def aquaria
+  def new
+    @aquarium = Aquarium.new
     @tanks = [10, 55]
-    render :new
   end
 
-  def select_aquarium
-    params[:Gallons]
-    #cookies
-    redirect_to :fishies
-  end
-
-  def edit
+  def create
+    @aquarium = Aquarium.create(aquarium_params)
+    redirect_to new_fish_path
   end
 
   def update
+
   end
 
   private

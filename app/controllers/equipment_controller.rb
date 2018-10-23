@@ -12,7 +12,7 @@ class EquipmentController < ApplicationController
 
   def new
     @equipment = Equipment.new
-    @options = ["therm", "filter", "heater"]
+    @options = ["Thermometer", "Filtration System", "Heater", "Fan", "Food", "Net"]
     @aquarium = Aquarium.all.last
   end
 
@@ -22,7 +22,7 @@ class EquipmentController < ApplicationController
   end
 
   def edit
-    @options = ["therm", "filter", "heater"]
+    @options = ["Thermometer", "Filtration System", "Heater", "Fan", "Food", "Net"]
     @aquarium = Aquarium.all.last
   end
 
@@ -42,7 +42,14 @@ class EquipmentController < ApplicationController
   end
 
   def equip_facts
-      @facts = {"therm"=> "determines temp", "filter" => "keeps water clean", "heater" => "keep fishies warm"}
+      @facts = {"Thermometer"=> "Accurate and easy to read temperature measurement
+        for fresh or saltwater. Stainless steel thermometer rests on aquarium rim.
+          Safety zone indicator for instant monitoring of safe temperatures for most tropical fish.",
+          "Filtration System" => "keeps water clean",
+          "Heater" => "keep fishies warm",
+          "Fan" => "creates current",
+          "Food" => "Keepfeeds fishies",
+          "Net" => "Helpful for picking up dead fishies or other objects"}
       @equipment.facts1 = @facts[@equipment.item1]
       @equipment.facts2 = @facts[@equipment.item2]
       @equipment.facts3 = @facts[@equipment.item3]

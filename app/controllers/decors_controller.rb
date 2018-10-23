@@ -12,7 +12,7 @@ class DecorsController < ApplicationController
 
   def new
     @decor = Decor.new
-    @options = ["Mod", "country", "hipster"]
+    @options = ["Natural", "Spongebob", ""]
     @aquarium = Aquarium.all.last
   end
 
@@ -22,7 +22,7 @@ class DecorsController < ApplicationController
   end
 
   def edit
-    @options = ["Mod", "country", "hipster"]
+    @options = ["Natural", "Spongebob", "Hipster"]
     @aquarium = Aquarium.all.last
   end
 
@@ -42,7 +42,7 @@ class DecorsController < ApplicationController
   end
 
   def decor_facts
-    @facts = {"Mod"=> "soo mod", "country" => "yehawww", "hipster" => "fake news"}
+    @facts = {"Natural"=> "environment to emulate nature", "Spongebob" => "Who lives in a pineapple under the see", "Hipster" => "fake news"}
     @decor.facts = @facts[@decor.style]
     @decor.save
   end

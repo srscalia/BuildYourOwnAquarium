@@ -1,5 +1,5 @@
 class FishController < ApplicationController
-  before_action :find_fish, only: [:show, :edit, :update]
+  before_action :find_fish, only: [:edit, :update]
 
   def index
     @fishies = Fish.all
@@ -23,11 +23,13 @@ class FishController < ApplicationController
   end
 
   def edit
-
+    @options = ["Bob", "Peter", "Billy"]
+    @aquarium = Aquarium.all.last
   end
 
   def update
     @fish.update(fish_params)
+    redirect_to aquarium_path(@fish.aquarium_id)
   end
 
   private

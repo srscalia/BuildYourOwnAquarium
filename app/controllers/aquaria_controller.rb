@@ -17,6 +17,9 @@ class AquariaController < ApplicationController
     redirect_to new_fish_path
   end
 
+  def edit
+  end
+
   def update
 
   end

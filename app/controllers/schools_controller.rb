@@ -11,7 +11,7 @@ class SchoolsController < ApplicationController
 
   def new
     @school = School.new
-    @options = ["Bob", "Peter", "Billy"]
+    @options = ["Neon Tetra", "Tiger Barb", "Glo Fish"]
     @aquarium = Aquarium.all.last
   end
 
@@ -21,7 +21,7 @@ class SchoolsController < ApplicationController
   end
 
   def edit
-    @options = ["Bob", "Peter", "Billy"]
+    @options = ["Neon Tetra", "Tiger Barb", "Glo Fish"]
     @aquarium = Aquarium.all.last
   end
 
@@ -41,7 +41,7 @@ class SchoolsController < ApplicationController
   end
 
   def school_facts
-    @facts = {"Bob"=> "yooooooooo", "Peter" => "hey", "Billy" => "waddup"}
+    @facts = {"Neon Tetra"=> "yooooooooo", "Tiger Barb" => "hey", "Glo Fish" => "waddup"}
     @school.facts1 = @facts[@school.species1]
     @school.facts2 = @facts[@school.species2]
     @school.facts3 = @facts[@school.species3]

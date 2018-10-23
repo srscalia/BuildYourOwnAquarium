@@ -1,6 +1,10 @@
 <%= form_for @equipment do |f| %>
-  <%= f.label :item %>
-  <%= f.select(:item, @options)  %>
+  <%= f.label :item1 %>
+  <%= f.select(:item1, @options)  %>
+  <%= f.label :item2 %>
+  <%= f.select(:item2, @options)  %>
+  <%= f.label :item3 %>
+  <%= f.select(:item3, @options)  %>
   <%= f.hidden_field :aquarium_id, :value => @aquarium.id %>
   <%= f.submit "Create" %>
 <% end %>

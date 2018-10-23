@@ -12,17 +12,36 @@
 <p><%= link_to "Edit", edit_school_path %></p>
 
 
-<p>Equipment: <%= @aquarium.equipment.first.item %></p>
-<%= link_to "Edit", edit_equipment_path %>
+<p><b>Equipment</b></p>
+<ul>
+  <li><%= @aquarium.equipment.first.item1 %></li>
+  <li><%= @aquarium.equipment.first.item2 %></li>
+  <li><%= @aquarium.equipment.first.item3 %></li>
+</ul>
+<p><%= link_to "Edit", edit_equipment_path %></p>
 
 
 <p>Style: <%= @aquarium.decors.first.style %></p>
 <%= link_to "Edit", edit_decor_path %>
 
+
 <h3>Aquarium Facts</h3>
 
-<p><%=@aquarium.schools.first.species1 %>: <%= @aquarium.schools.first.facts1 %></p>
-<p><%=@aquarium.schools.first.species2 %>: <%= @aquarium.schools.first.facts2 %></p>
-<p><%=@aquarium.schools.first.species3 %>: <%= @aquarium.schools.first.facts3 %></p>
-<p><%= @aquarium.equipment.first.item %>: <%= @aquarium.equipment.first.facts %></p>
-<p>Style: <%= @aquarium.decors.first.facts %></p>
+<p> Fish Facts </p>
+<ul>
+  <li><%=@aquarium.schools.first.species1 %>: <%= @aquarium.schools.first.facts1 %></li>
+  <li><%=@aquarium.schools.first.species2 %>: <%= @aquarium.schools.first.facts2 %></li>
+  <li><%=@aquarium.schools.first.species3 %>: <%= @aquarium.schools.first.facts3 %></li>
+</ul>
+
+<p> Equipments Facts </p>
+<ul>
+  <li><%=@aquarium.equipment.first.item1 %>: <%= @aquarium.equipment.first.facts1 %></li>
+  <li><%=@aquarium.equipment.first.item2 %>: <%= @aquarium.equipment.first.facts2 %></li>
+  <li><%=@aquarium.equipment.first.item3 %>: <%= @aquarium.equipment.first.facts3 %></li>
+</ul>
+
+<p> Decor Facts </p>
+<ul>
+  <li><%= @aquarium.decors.first.facts %></li>
+</ul>

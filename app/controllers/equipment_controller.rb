@@ -7,6 +7,7 @@ class EquipmentController < ApplicationController
   end
 
   def show
+
   end
 
   def new
@@ -33,7 +34,7 @@ class EquipmentController < ApplicationController
   private
 
   def equipment_params
-    params.require(:equipment).permit(:item, :aquarium_id)
+    params.require(:equipment).permit(:item1, :item2, :item3, :aquarium_id)
   end
 
   def find_equipment
@@ -41,8 +42,10 @@ class EquipmentController < ApplicationController
   end
 
   def equip_facts
-      @facts = {"therm"=> "really cool bro", "filter" => "yeah this is awesome", "heater" => "keep fishies warm"}
-      @equipment.facts = @facts[@equipment.item]
+      @facts = {"therm"=> "determines temp", "filter" => "keeps water clean", "heater" => "keep fishies warm"}
+      @equipment.facts1 = @facts[@equipment.item1]
+      @equipment.facts2 = @facts[@equipment.item2]
+      @equipment.facts3 = @facts[@equipment.item3]
       @equipment.save
   end
 

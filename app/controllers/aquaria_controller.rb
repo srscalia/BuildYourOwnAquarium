@@ -2,8 +2,7 @@ class AquariaController < ApplicationController
 
   before_action :find_aquarium, only: [:update]
 
-  def index
-    @aquaria = Aquarium.all
+  def homepage
   end
 
   def new

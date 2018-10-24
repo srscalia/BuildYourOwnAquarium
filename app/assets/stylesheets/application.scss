@@ -50,3 +50,35 @@
  @import "materialize/components/pulse";
  @import "materialize/components/datepicker";
  @import "materialize/components/timepicker";
+
+ .parent {
+   position: relative;
+   top: 0;
+   left: 0;
+ }
+ .fish_tank {
+   position: relative;
+   top: 0;
+   left: 0;
+ }
+ .fish1 {
+   position: absolute;
+   top: 50px;
+   left: 100px;
+   height: 100px;
+   width: 125px;
+ }
+ .fish2 {
+   position: absolute;
+   top: 100px;
+   left: 150px;
+   height: 100px;
+   width: 125px;
+ }
+ .fish3 {
+   position: absolute;
+   top: 150px;
+   left: 200px;
+   height: 100px;
+   width: 125px;
+ }

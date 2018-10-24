@@ -1,5 +1,7 @@
-<%= form_for @aquarium do |f| %>
+<div>
+  <%= form_for @aquarium do |f| %>
   <%= f.label :gallons %>
-  <%= f.select(:gallons, @tanks)  %>
+  <div class ='input-field'><%= f.select(:gallons, @tanks)  %></div>
   <%= f.submit "Create" %>
-<% end %>
+  <% end %>
+</div>

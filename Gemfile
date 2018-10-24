@@ -36,10 +36,8 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-#Use to leverage bootstrap CSS
-gem 'bootstrap', '~> 4.1.3'
-#Bootstrap Javascript gem (NOTE: Not sure if the download requires this for it to work)
-gem 'jquery-rails'
+# Gem for Materialize
+gem 'materialize-sass', '~> 1.0.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

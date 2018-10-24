@@ -1,6 +1,5 @@
 class DecorsController < ApplicationController
   before_action :find_decor, only: [:show, :edit, :update]
-  after_action :decor_facts, only: [:create, :update]
 
   def index
 
@@ -39,12 +38,6 @@ class DecorsController < ApplicationController
 
   def find_decor
     @decor = Decor.find_by(id: params[:id])
-  end
-
-  def decor_facts
-    @facts = {"Natural"=> "environment to emulate nature", "Spongebob" => "Who lives in a pineapple under the see", "Hipster" => "fake news"}
-    @decor.facts = @facts[@decor.style]
-    @decor.save
   end
 
 end

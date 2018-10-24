@@ -103,8 +103,22 @@ class SchoolsController < ApplicationController
          blue, and long-finned. The recommended temperature range for Rams is
          75-81° F and a PH of 6.5 - 7.5.  Rams will eat a variety of flakes
          as well as live and frozen food.",
-      "Magikarp"=> "3",
-      "Gyarados" => "3"}
+      "Magikarp"=> "Magikarp is a medium-sized fish Pokémon with large, heavy
+      reddish-orange scales. It is unable to swim against even slow-moving
+      currents. It is virtually worthless in terms of both power and speed and
+      is the most weak and pathetic Pokémon in the world. Their primary diet
+      should be made of berries of the Oran, Sitrus, or Razz variety. Magikarps
+      have strong immune systems so they can live in water that ranges from
+      anywhere between 15-200° F with a PH of 1 to 20.",
+      "Gyarados" => "Gyarados is a fish-ish creature that can both fly and swim.
+       Its scientific name is pokemonius atrociosis. They  generally should be
+       kept in their own fish tank, with a size of at least 50,000 gallons.
+       Although these creatures do not make great tank mates with other fish,
+         Wikipedia states that they may be able to be kept in the same tank as
+         common gold fish. Ancient lore states that a Gyarados is capable of
+         destroying entire cities when enraged, so it is good practice to feed
+         them often and keep them happy. It is worth noting that the legality
+         of keeping a Gyarados as a pet varies from state to state."}
     @school.facts1 = @facts[@school.species1]
     @school.facts2 = @facts[@school.species2]
     @school.facts3 = @facts[@school.species3]

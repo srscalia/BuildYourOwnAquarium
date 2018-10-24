@@ -1,22 +1,10 @@
-<div class="jumbotron text-center" style="margin-bottom:0">
-  <h1>Welcome to AquaLand</h1>
-</div>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
+<nav>
+  <div class="nav-wrapper">
+    <div class="brand-logo">AquaLand</div>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="aquaria/new">Create New Aquarium</a></li>
+      <li><a href="">Resources</a></li>
+      <li><a href="">Contact</a></li>
     </ul>
   </div>
 </nav>
@@ -25,5 +13,3 @@
   <p>Welcome to Aqualand, where you can build your own aquarium!!!!</p>
   <p>Let's get started. Complete a quick questionaire to build your own aquarium. We'll give you tips and fun facts.</p>
 </div>
-
-<%= link_to "New", new_aquarium_path %>

@@ -2,6 +2,10 @@ class AquariaController < ApplicationController
 
   before_action :find_aquarium, only: [:update]
 
+  def index
+    @aquaria = Aquarium.all
+  end
+
   def new
     @aquarium = Aquarium.new
     @tanks = [10, 55]

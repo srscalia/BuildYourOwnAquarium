@@ -12,7 +12,7 @@ class DecorsController < ApplicationController
 
   def new
     @decor = Decor.new
-    @options = ["Natural", "Spongebob", ""]
+    @options = ["Natural", "Spongebob", "Hipster"]
     @aquarium = Aquarium.all.last
   end
 

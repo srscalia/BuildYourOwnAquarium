@@ -5,21 +5,21 @@
 
 <p><b>Style</b>: <%= @aquarium.decor.style %></p>
 <%= link_to "Edit", edit_decor_path %>
-<br><br>
+<br>
 
 <p><b> Fish Facts </b></p>
 <ul>
-  <li><%=@aquarium.school.species1 %>: <%= @aquarium.school.facts1 %></li><br>
-  <li><%=@aquarium.school.species2 %>: <%= @aquarium.school.facts2 %></li><br>
-  <li><%=@aquarium.school.species3 %>: <%= @aquarium.school.facts3 %></li><br>
+  <li><b><%=@aquarium.school.species1 %></b>: <%= @aquarium.school.facts1 %></li><br>
+  <li><b><%=@aquarium.school.species2 %></b>: <%= @aquarium.school.facts2 %></li><br>
+  <li><b><%=@aquarium.school.species3 %></b>: <%= @aquarium.school.facts3 %></li>
 </ul>
 <p><%= link_to "Edit", edit_school_path %></p>
 
 <p><b> Equipments Facts </b></p>
 <ul>
-  <li><%=@aquarium.equipment.item1 %>: <%= @aquarium.equipment.facts1 %></li><br>
-  <li><%=@aquarium.equipment.item2 %>: <%= @aquarium.equipment.facts2 %></li><br>
-  <li><%=@aquarium.equipment.item3 %>: <%= @aquarium.equipment.facts3 %></li><br>
+  <li><b><%=@aquarium.equipment.item1 %></b>: <%= @aquarium.equipment.facts1 %></li><br>
+  <li><b><%=@aquarium.equipment.item2 %></b>: <%= @aquarium.equipment.facts2 %></li><br>
+  <li><b><%=@aquarium.equipment.item3 %></b>: <%= @aquarium.equipment.facts3 %></li>
 </ul>
 <p><%= link_to "Edit", edit_equipment_path %></p>
 </div>

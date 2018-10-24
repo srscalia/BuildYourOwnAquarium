@@ -1,7 +1,7 @@
 <div class="container">
   <%= form_for @aquarium, class: "form" do |f| %>
   <%= f.label :gallons %>
-  <%= f.select(:gallons, @tanks)  %>
+  <%= f.select(:gallons, @tanks)  %><br><br>
   <%= f.submit "Create" %>
   <% end %>
 </div>

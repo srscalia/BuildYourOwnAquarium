@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 2018_10_22_153329) do
 
   create_table "aquaria", force: :cascade do |t|
+    t.string "creator"
     t.integer "gallons"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -1,5 +1,7 @@
 <div class="container">
   <%= form_for @aquarium, class: "form" do |f| %>
+  <%= f.label :creator, "Name" %>
+  <%= f.text_field :creator  %><br><br>
   <%= f.label :gallons %>
   <%= f.select(:gallons, @tanks)  %><br><br>
   <%= f.submit "Create" %>

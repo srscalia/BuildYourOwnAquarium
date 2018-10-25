@@ -33,7 +33,7 @@ class AquariaController < ApplicationController
   private
 
   def aquarium_params
-    params.require(:aquarium).permit(:gallons)
+    params.require(:aquarium).permit(:creator, :gallons)
   end
 
   def find_aquarium

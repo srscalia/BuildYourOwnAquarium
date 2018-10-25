@@ -33,7 +33,7 @@ class SchoolsController < ApplicationController
   private
 
   def school_params
-    params.require(:school).permit(:species1, :species2, :species3, :aquarium_id)
+    params.require(:school).permit(:species1, :species2, :species3, :species4, :species5, :aquarium_id)
   end
 
   def find_school
@@ -122,6 +122,8 @@ class SchoolsController < ApplicationController
     @school.facts1 = @facts[@school.species1]
     @school.facts2 = @facts[@school.species2]
     @school.facts3 = @facts[@school.species3]
+    @school.facts4 = @facts[@school.species4]
+    @school.facts5 = @facts[@school.species5]
     @school.save
   end
 

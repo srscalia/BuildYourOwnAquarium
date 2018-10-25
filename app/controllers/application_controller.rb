@@ -8,4 +8,5 @@ class ApplicationController < ActionController::Base
 
   def resources
   end
+
 end

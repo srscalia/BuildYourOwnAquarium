@@ -1,17 +1,11 @@
-<% @aquaria.each do |aq| %>
-<div class="row">
-<div class="col s4"><%=link_to aq.id, aquarium_path(aq.id)%>  </div>
-<%end %>
-
-
-
-        <!-- Promo Content 1 goes here -->
-
-      <div class="col s4">
-        <!-- Promo Content 2 goes here -->
-      </div>
-      <div class="col s4">
-        <!-- Promo Content 3 goes here -->
-      </div>
-
-    </div>
+<div class="section container">
+  <br>
+  <h5 class = "light">View Your Friend's Aquarium</h5>
+  <br>
+  <div class="container center">
+    <% @aquaria.each do |aq| %>
+    <div class="row">
+    <div class="col s4"><%=link_to aq.creator, aquarium_path(aq.id)%>  </div>
+    <%end %>
+  </div>
+</div>

@@ -51,6 +51,26 @@
  @import "materialize/components/datepicker";
  @import "materialize/components/timepicker";
 
+
+// import Animate library
+@import 'animate';
+
+.margin {
+  margin-left: auto;
+   margin-right: auto;
+}
+
+.animations {
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
  .parent {
    position: relative;
    top: 0;
@@ -82,3 +102,4 @@
    height: 100px;
    width: 125px;
  }
+

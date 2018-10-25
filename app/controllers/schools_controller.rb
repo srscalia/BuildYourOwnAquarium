@@ -69,7 +69,7 @@ class SchoolsController < ApplicationController
        range of water temperatures. They should do fine in any water temperature between
          65- 82⁰Fahrenheit and a PH of 7.0 to 8.4. Swordtails will accept a wide variety
          of foods including quality flake food or live food such as worms.",
-      "Cory Catfish" => "Cory Catfish are are very popular freshwater fish that come
+      "Cory Catfish" => "Cory Catfish are very popular freshwater fish that come
       in many different colors and sizes. Cory Catfish are very social creatures,
       especially with others of their kind. While Cory Cats can survive alone, they
       seem much happier in a group of two or more. Depending on the specific type,

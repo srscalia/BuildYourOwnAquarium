@@ -1,9 +1,9 @@
 <div class="container">
   <%= form_for @aquarium, class: "form" do |f| %>
-  <%= f.label :creator, "Name" %>
+  <%= f.label :creator, "Your name" %>
   <%= f.text_field :creator  %><br><br>
   <%= f.label :gallons %>
   <%= f.select(:gallons, @tanks)  %><br><br>
-  <%= f.submit "Create" %>
+  <%= f.submit "Next", :class => 'waves-effect waves-light btn-small orange' %>
   <% end %>
 </div>

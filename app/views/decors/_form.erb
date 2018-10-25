@@ -3,6 +3,6 @@
     <%= f.label :style %>
     <%= f.select(:style, @options)  %>
     <%= f.hidden_field :aquarium_id, :value => @aquarium.id %><br><br>
-    <%= f.submit "Create" %>
+    <%= f.submit "Submit", :class => 'waves-effect waves-light btn-small orange' %>
   <% end %>
 </div>

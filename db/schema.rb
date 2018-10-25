@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2018_10_22_153329) do
   create_table "decors", force: :cascade do |t|
     t.string "style"
     t.string "aquarium_id"
+    t.string "facts"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

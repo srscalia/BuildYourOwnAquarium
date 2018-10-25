@@ -2,14 +2,6 @@ class EquipmentController < ApplicationController
   before_action :find_equipment, only: [:show, :edit, :update]
   after_action :equip_facts, only: [:create, :update]
 
-  def index
-    @equipment = Equipment.all
-  end
-
-  def show
-
-  end
-
   def new
     @equipment = Equipment.new
     @options = ["Thermometer", "Filtration System", "Heater", "Circulation Pump"]

@@ -36,28 +36,31 @@
 
   <div class="parent animated bounceInDown">
     <img class="fish_tank" src="https://cdn.dribbble.com/users/375867/screenshots/1512391/under-the-sea-ocean-water-aquarium-game-background-game-asset-side-scroller.png">
-    <img class="fish1 animated pulse animations" src="<%=img1%>">
-    <img class="fish2 animated pulse animations" src="<%=img2%>">
-    <img class="fish3 animated pulse animations" src="<%=img3%>">
-    <img class="fish4 animated pulse animations" src="<%=img4%>">
-    <img class="fish5 animated pulse animations" src="<%=img5%>">
-  </div><br>
 
-  <h5 class = 'light'> <%=@aquarium.creator%>'s Aquarium</h5><br>
+    <div class="tool" data-tip=<%=@aquarium.school.species1 %>><img class="fish1 animated pulse animations" src="<%=img1%>"> </div>
+    <div class="tool" data-tip=<%=@aquarium.school.species2 %>><img class="fish2 animated pulse animations" src="<%=img2%>"> </div>
+    <div class="tool" data-tip=<%=@aquarium.school.species3 %>><img class="fish3 animated pulse animations" src="<%=img3%>"> </div>
+    <div class="tool" data-tip=<%=@aquarium.school.species4 %>><img class="fish4 animated pulse animations" src="<%=img4%>"> </div>
+    <div class="tool" data-tip=<%=@aquarium.school.species5 %>><img class="fish5 animated pulse animations" src="<%=img5%>"> </div>
 
-  <p><b>Size</b>: <%= @aquarium.gallons %> gallons</p>
-  <p><%= link_to "Edit", edit_aquarium_path %></p>
+  </div> <br>
 
-  <p><b>Style</b>: <%= @aquarium.decor.style %></p>
+
+  <h5 class = 'light'> <%=@aquarium.creator%>'s Aquarium</h5> <br>
+
+  <p><b>Size</b>: <%= @aquarium.gallons %> gallons </p>
+  <p><%= link_to "Edit", edit_aquarium_path %> </p>
+
+  <p><b>Style</b>: <%= @aquarium.decor.style %>< /p>
   <%= link_to "Edit", edit_decor_path %><br>
 
   <p><b> Fish Facts </b></p>
   <ul>
-    <li><b><%=@aquarium.school.species1 %></b>: <%= @aquarium.school.facts1 %></li><br>
-    <li><b><%=@aquarium.school.species2 %></b>: <%= @aquarium.school.facts2 %></li><br>
-    <li><b><%=@aquarium.school.species3 %></b>: <%= @aquarium.school.facts3 %></li><br>
-    <li><b><%=@aquarium.school.species4 %></b>: <%= @aquarium.school.facts4 %></li><br>
-    <li><b><%=@aquarium.school.species5 %></b>: <%= @aquarium.school.facts5 %></li><br>
+    <li><b><%=@aquarium.school.species1 %></b>: <%= @aquarium.school.facts1 %></li> <br>
+    <li><b><%=@aquarium.school.species2 %></b>: <%= @aquarium.school.facts2 %></li> <br>
+    <li><b><%=@aquarium.school.species3 %></b>: <%= @aquarium.school.facts3 %></li> <br>
+    <li><b><%=@aquarium.school.species4 %></b>: <%= @aquarium.school.facts4 %></li> <br>
+    <li><b><%=@aquarium.school.species5 %></b>: <%= @aquarium.school.facts5 %></li> <br>
   </ul>
   <p><%= link_to "Edit", edit_school_path %></p>
 

@@ -4,6 +4,17 @@ class AquariaController < ApplicationController
 
   def index
       @aquaria = Aquarium.all
+      @fish_urls = ["https://i.imgur.com/KYqnjHh.png",
+      "https://www.aqueon.com/-/media/images/aqueon-na/us/assets/care-sheets/tigerbarborsumatrabarbfish_600x400%20png.png?h=400&la=en&w=600&hash=209E3AC3907BBC855E4F98576BC3DB2326E5673B",
+      "https://png2.kisspng.com/sh/9ff6c4054d98a0376063b08a79d8f43b/L0KzQYm3VME6N5p5j5H0aYP2gLBuTfdwdJVrgeVxLXH0hbL5igVue15shNHvaYPrPcXslQJiNZD3edDwZT3qfLFATcVibGo1fNRsNnS1QLe6TsIxQWIASKk7MUW1RIKAVMI3QGU5T5D5bne=/kisspng-goldfish-aquariums-glofish-tetra-orange-glow-5ad90dbc6d20f3.209190721524174268447.png",
+      "https://i.imgur.com/V8iLmgd.png",
+      "https://i.imgur.com/LRGNULI.png",
+      "https://i.imgur.com/FNjPmM2.png",
+      "https://i.imgur.com/0LAKanv.png",
+      "https://i.imgur.com/r7CW4Vz.png",
+      "https://i.imgur.com/yg7A7R9.png",
+      "https://png2.kisspng.com/sh/63aefe613530b195ca1fea92cc8223a8/L0KzQYm3WMEyN5ZwkJH0aYP2gLBuTgBwc550hp9DLXHxdH7CTfd6aaNmfNH8LYDye772jr1od15yedlya3H1gH70igMuNWZnTtgCZki4dIa8V8k2Nmo1Sqg8MEC6QYa6VMA0O2gAT6oCM0mxgLBu/kisspng-pokmon-x-and-y-gyarados-pokmon-go-magikarp-mis--5b6f7f85d55795.9026300715340337978739.png"
+    ]
   end
 
   def new

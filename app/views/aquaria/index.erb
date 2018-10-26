@@ -5,14 +5,10 @@
 
   <br><br>
 
-  <div class="container center">
+  <div class="container">
     <% @aquaria.each do |aq| %>
-    <div class="row">
-      <div class="col s4">
-        <a href = 'https://materializecss.com/buttons.html', class="btn-floating btn-large waves-effect waves-light orange"><i class="material-icons">add</i></a>
-        <p><%=link_to aq.creator, aquarium_path(aq) %></p><br>
-      </div>
+        <%= link_to aq.creator, aquarium_path(aq)%><br>
     <%end %>
-    </div>
-
   </div>
+
+<img src="https://i.imgur.com/kCCvdka.png" alt="Italian Trulli" class="image">

@@ -1,6 +1,6 @@
 class AquariaController < ApplicationController
 
-  before_action :find_aquarium, only: [:update]
+  before_action :find_aquarium, only: [:show, :update]
 
   def index
       @aquaria = Aquarium.all
@@ -23,7 +23,6 @@ class AquariaController < ApplicationController
   end
 
   def show
-    @aquarium = Aquarium.all.last
   end
 
   def create
